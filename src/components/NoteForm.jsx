@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const NoteForm = ({ onSubmit, initialData }) => {
     const [note, setNotes] = useState(initialData);
-    // Necesitamos actualizar los cambios si los datos iniciales cambiar
+    // Necesitamos actualizar los cambios si los datos iniciales cambian, por ejemplo, cuando el usuario hace click en el botón de editar una nota, se redirige a la página de edición y se pasan los datos de la nota a editar al componente NoteForm a través de la prop initialData, entonces necesitamos actualizar el estado de note con los nuevos datos de la nota a editar cada vez que initialData cambie, para mostrar los valores actuales de la nota en el formulario de edición
     useEffect(() => {
         setNotes(initialData);
     }, [initialData]);

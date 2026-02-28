@@ -9,6 +9,7 @@ const DeleteConfirmationModal = ({ title, deleteNote, setShowConfirmModal }) => 
 
                 <div className="flex justify-end gap-3 mt-6">
                     <button className="btn btn-ghost" onClick={() => setShowConfirmModal(false)}>
+                        {/* Botón para cancelar la eliminación, al hacer click cierra el modal de confirmación de eliminación, cambiando el estado de showConfirmModal a false */}
                         Cancelar
                     </button>
                     <button className="btn btn-error" onClick={deleteNote}>
